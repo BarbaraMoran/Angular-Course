@@ -87,12 +87,21 @@ export class ProductListComponent implements OnInit{
 
   }
 
-  ngOnInit(): void {
-      this.listFilter = 'cart';
+
+  //el message viene desde el emiter
+  onRatingClicked(message: string):void {
+    this.pageTitle = 'Product list: ' + message;
   }
+
 
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
+
+  ngOnInit(): void {
+    this.listFilter = 'cart';
+}
+
+
 
 }
